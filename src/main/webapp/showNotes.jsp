@@ -1,3 +1,4 @@
+<%@page import="lendle.courses.wp.finalexam.Logins"%>
 <%@page import="lendle.courses.wp.finalexam.Note"%>
 <%@page import="lendle.courses.wp.finalexam.UserData"%>
 <%@ page contentType="text/html" pageEncoding="utf-8"%>
@@ -24,6 +25,15 @@
       將目前 session 中記錄的 user 的 notes 顯示在下列表格中
       (20%)
       -->
+      <%
+          HttpSession httpSession=request.getSession();
+          List<Note> notes=
+          out.println("<tr>");
+          out.println("<th>"+getHeader().getDate()"</th>");
+          out.println("<th>"+getHeader().getTitle()"</th>");
+          out.println("<th>"+getContent()t"</th>");
+          out.println("</tr>");
+      %>
       <table border="1" style="width: 90%">
           <thead>
               <tr>
